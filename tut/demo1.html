@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Llais Synthetig Cymraeg / Welsh Synthetic Voice</title>
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+        <style type="text/css">
+        code {
+            display: block;
+            overflow:scroll;
+            width:800px;
+            border:1px solid #999;
+            padding:0 20px;
+            margin:20px 0 20px 40px;
+        }
+        #llais {
+            width:400px;
+            display:block;
+            padding:10px;
+            margin-left:40px;
+        }
+        button {
+            margin-left:40px;
+        }
+        </style>
+</head>
+
+<body id="home">
+    <h1>Demo Llais Synthetig Cymraeg / Welsh Synthetic Language Demo</h1>
+    
+    <h3>HTML5 &lt;audio&gt;</h3>
+    <blockquote><em>"Mae hyn yn llais synthetig Cymraeg sydd wedi ei greu gan techiaith"</em></blockquote>
+
+<audio controls>
+  <source src="https://api.techiaith.org/marytts/v1?api_key=62bb5885-294d-4fcf-9b2a-23195723ea07&text=Mae%20hyn%20yn%20llais%20synthetig%20Cymraeg%20sydd%20wedi%20ei%20greu%20gan%20techiaith" type="audio/ogg">
+Your browser does not support the audio element.
+</audio>
+
+<h4>Cod /Code:</h4>
+<code><xmp><audio controls>
+<source src="https://api.techiaith.org/marytts/v1?api_key=62bb5885-294d-4fcf-9b2a-23195723ea07&text=Mae%20hyn%20yn%20llais%20synthetig%20Cymraeg%20sydd%20wedi%20ei%20greu%20gan%20techiaith" type="audio/ogg">
+Your browser does not support the audio element.
+</audio></xmp></code>
+
+<hr/>
+
+<h3>Autoplay</h3>
+<p>Mae'r sain yn cael ei chwarae'n syth / the audio is autoplayed</p>
+<blockquote><em>"Dyma llais synthetig Cymraeg sy'n cael ei chwarae'n awtomatig"</em></blockquote>
+
+<audio controls >
+  <source src="https://api.techiaith.org/marytts/v1?api_key=62bb5885-294d-4fcf-9b2a-23195723ea07&text=Dyma%llais%20synthetig%20Cymraeg%20sy'n%20cael%20ei%20chwarae'n%20awtomatig" type="audio/ogg">
+Your browser does not support the audio element.
+</audio>
+
+<h4>Cod / Code</h4>
+
+<code><xmp><audio controls autoplay>
+  <source src="https://api.techiaith.org/marytts/v1?api_key=62bb5885-294d-4fcf-9b2a-23195723ea07&text=Dyma%llais%20synthetig%20Cymraeg%20sy'n%20cael%20ei%20chwarae'n%20awtomatig" type="audio/ogg">
+Your browser does not support the audio element.
+</audio></xmp></code>
+
+<hr/>
+
+<h3>Lais Cymraeg trwy Javascript / Welsh voice through Javascript</h3>
+
+<textarea id='llais'>
+Ysgrifennwch rhywbeth i'w llefaru
+</textarea>
+
+<script type='text/javascript'>
+function llefaru() {
+    var testun = document.getElementById('llais').value.trim();
+    var audioElement = document.createElement('audio');
+    var url = "https://api.techiaith.org/marytts/v1?api_key=62bb5885-294d-4fcf-9b2a-23195723ea07&text=" + encodeURI(testun);
+    audioElement.setAttribute('src', url);
+    audioElement.play();
+}
+</script>
+<p>
+<button onclick="llefaru()">Chwarae / Play</button>
+</p>
+
+<p><strong>Cod / Code:</strong></p>
+
+<code><xmp><textarea id='llais'>
+Ysgrifennwch rhywbeth i'w llefaru
+</textarea>
+
+<script type='text/javascript'>
+function llefaru() {
+    var testun = document.getElementById('llais').value.trim();
+    var audioElement = document.createElement('audio');
+    var url = "https://api.techiaith.org/marytts/v1?api_key=62bb5885-294d-4fcf-9b2a-23195723ea07&text=" + encodeURI(testun);
+    audioElement.setAttribute('src', url);
+    audioElement.play();
+}
+</script>
+<p>
+
+<button onclick="llefaru()">Chwarae / Play</button>
+</p></xmp></code>
+
+</body>
+</html>
