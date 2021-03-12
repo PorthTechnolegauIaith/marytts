@@ -25,7 +25,7 @@ Mae cysylltiad â'r API yn gweithio dros HTTPS yn unig, gan ddefnyddio'r parth `
 |--------------|------------|----------|
 | `api_key`    | Eich allwedd API, ar gael o'r Canolfan APIs (https://api.techiaith.org) | angenrheidiol |
 | `text`       | Y testun i'w lleferu. Wedi'i fformatio yn ôl RFC 3986 yn ôl RFC 3986 (percent-encoded) | angenrheidiol |
-| 'uid'        | Allwedd i'r llais synthetig i'w ddefnyddio. Ar moment gellir defnyddio `wispr` (llais gwrywaidd gogleddol) neu `benyw-gogledd` (llais benywaidd gogleddol) | dewisol (rhagosodiad yw `wispr`)|
+| `uid`        | Allwedd i'r llais synthetig i'w ddefnyddio. Ar moment gellir defnyddio `wispr` (llais gwrywaidd gogleddol) neu `benyw-gogledd` (llais benywaidd gogleddol) | dewisol (rhagosodiad yw `wispr`)|
 | `format`     | Fformat y ffeil allbwn. Gallwch ddewis rhwng `mp3` a `wav`. Rhagosodiad: `mp3` | dewisol |    
 | `lang`       | Yr iaith ar gyfer unrhyw destun fydd yn cael ei ddychwelyd (e.e. negeseuon gwall). Dewis o `en` neu `cy`. Rhagosodiad: `cy` | dewisol |
 
