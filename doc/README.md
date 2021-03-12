@@ -25,13 +25,14 @@ Mae cysylltiad â'r API yn gweithio dros HTTPS yn unig, gan ddefnyddio'r parth `
 |--------------|------------|----------|
 | `api_key`    | Eich allwedd API, ar gael o'r Canolfan APIs (https://api.techiaith.org) | angenrheidiol |
 | `text`       | Y testun i'w lleferu. Wedi'i fformatio yn ôl RFC 3986 yn ôl RFC 3986 (percent-encoded) | angenrheidiol |
+| 'uid'        | Allwedd i'r llais synthetig i'w ddefnyddio. Ar moment gellir defnyddio `wispr` (llais gwrywaidd gogleddol) neu `benyw-gogledd` (llais benywaidd gogleddol) | dewisol (rhagosodiad yw `wispr`)|
 | `format`     | Fformat y ffeil allbwn. Gallwch ddewis rhwng `mp3` a `wav`. Rhagosodiad: `mp3` | dewisol |    
 | `lang`       | Yr iaith ar gyfer unrhyw destun fydd yn cael ei ddychwelyd (e.e. negeseuon gwall). Dewis o `en` neu `cy`. Rhagosodiad: `cy` | dewisol |
 
 ### Enghraifft
 
 ```
-$ curl https://api.techiaith.org/marytts/v1?api_key=123&text=mae%20hen%20wlad%20fy%20nhadau > allan.mp3
+$ curl https://api.techiaith.org/marytts/v1?api_key=123&uid=benyw-gogledd&text=mae%20hen%20wlad%20fy%20nhadau > allan.mp3
 $ file allan.mp3
 allan.mp3: MPEG ADTS, layer III, v2,  56 kbps, 16 kHz, Monaural
 ```
@@ -112,13 +113,14 @@ The connection to the API is over HTTPS only, from the domain `api.techiaith.org
 |------------|------------|----------|
 | `api_key`  | Your API key, from the API Centre (https://api.techiaith.org) | required |
 | `text`     | The text to speak. Formatted according to RFC 3986 (percent-encoded) | required |
+| `uid`      | An id to the synthetic voice to be used for generating speech audio. Recognised values are `wispr` (northern Wales accented male voice) and `benyw-gogledd` (northern Wales accented female voice) | optional (default voice is `wispr`) |
 | `format`   | Format of the output audio file. Can be either `mp3` or `wav`. Default: `mp3` | optional |
 | `lang`     | The language for any text returned by the API (e.e. grammar suggestion sentences, error messages). Choices: `en` or `cy`. Default: `cy` | optional |
 
 ### Example
 
 ```
-$ curl https://api.techiaith.org/marytts/v1?api_key=123&text==mae%20hen%20wlad%20fy%20nhadau > out.mp3
+$ curl https://api.techiaith.org/marytts/v1?api_key=123&uid=benyw-gogledd&text==mae%20hen%20wlad%20fy%20nhadau > out.mp3
 $ file out.mp3
 out.mp3: MPEG ADTS, layer III, v2,  56 kbps, 16 kHz, Monaural
 ```
